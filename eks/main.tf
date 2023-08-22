@@ -4,10 +4,10 @@ provider "aws" {
 
 locals {
   name   = "practical-devops-sd4499-eks"
-  region = "us-east-1"
+  region = "us-east-2"
 
   vpc_cidr = "10.123.0.0/16"
-  azs      = ["us-east-1a", "us-east-1b"]
+  azs      = ["us-east-2a", "us-east-2b"]
 
   public_subnets  = ["10.123.1.0/24", "10.123.2.0/24"]
   private_subnets = ["10.123.3.0/24", "10.123.4.0/24"]
@@ -94,7 +94,7 @@ module "eks" {
       }
 
       tags = {
-        ExtraTag = "Hello World Tag"
+        ExtraTag = "Hello World"
       }
     }
   }

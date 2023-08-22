@@ -12,7 +12,7 @@ resource "aws_vpc" "PracticalDevOpsSD4499_vpc" {
 resource "aws_subnet" "PracticalDevOpsSD4499_public_subnet" {
   vpc_id                  = aws_vpc.PracticalDevOpsSD4499_vpc.id
   cidr_block              = "10.16.0.0/20"
-  availability_zone       = "us-east-1a"
+  availability_zone       = "us-east-2a"
   map_public_ip_on_launch = true
 
   tags = {

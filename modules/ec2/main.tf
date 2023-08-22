@@ -12,7 +12,7 @@ module "ec2_instance_tags" {
 }
 
 resource "aws_instance" "PracticalDevOpsSD4499_ec2" {
-  ami                     = "ami-0f34c5ae932e6f0e4"
+  ami                     = "ami-0ccabb5f82d4c9af5"
   instance_type           = "t3a.large"
   key_name                = aws_key_pair.generated_key.key_name
   vpc_security_group_ids  = ["${aws_security_group.PracticalDevOpsSD4499_security_group.id}"]
